@@ -30,18 +30,24 @@ fun Application.configureRouting() {
 
     install(Thymeleaf) {
         setTemplateResolver(ClassLoaderTemplateResolver().apply {
-            prefix = "static/"
+            prefix = "public/"
+            suffix = ".html"
+            characterEncoding = "utf-8"
+        })
+        setTemplateResolver(ClassLoaderTemplateResolver().apply {
+            prefix = "dashboard/"
             suffix = ".html"
             characterEncoding = "utf-8"
         })
     }
 
     routing {
-        staticResources("/assets", "static/assets")
+        staticResources("/dashboard/assets", "dashboard/assets")
+        staticResources("/assets", "public/assets")
 
-        get("/") {
-            call.respondText("Hello World!")
-        }
+        staticResources("/dashboard", "dashboard")
+        staticResources("/", "public")
+
         get("/dsl") {
             call.respondHtml {
                 body {
