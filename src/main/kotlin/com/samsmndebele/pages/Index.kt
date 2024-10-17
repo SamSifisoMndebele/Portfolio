@@ -528,6 +528,98 @@ fun HTML.indexHtml() {
         }*/
         /// Services Section End
 
+        /// Contact Section
+        div(classes = "section contact") {
+            id = "contact"
+            iframe(classes = "map") {
+                id = "map"
+                width = "100%"
+                style = "border:0;"
+                attributes["loading"] = "lazy"
+                attributes["referrerpolicy"] = "no-referrer-when-downgrade"
+                attributes["allowfullscreen"] = ""
+                src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.33269586726652!2d31.154130775885324!3d-25.360484570110884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee839ca74913f63%3A0x5bed9ed642e818e8!2sAVIDCo!5e0!3m2!1sen!2sza!4v1729181807545!5m2!1sen!2sza"
+            }
+            div(classes = "container") {
+                div(classes = "row") {
+                    div(classes = "col-lg-8") {
+                        div(classes = "contact-form-card") {
+                            h4(classes = "contact-title") { +"Send a message" }
+                            form(action = "") {
+                                div(classes = "form-group") {
+                                    input(classes = "form-control", type = InputType.text) {
+                                        required = true
+                                        placeholder = "Name *"
+                                    }
+                                }
+                                div(classes = "form-group") {
+                                    input(classes = "form-control", type = InputType.email) {
+                                        required = true
+                                        placeholder = "Email *"
+                                    }
+                                }
+                                div(classes = "form-group") {
+                                    textArea(classes = "form-control", rows = "7") {
+                                        required = true
+                                        placeholder = "Message *"
+                                    }
+                                }
+                                div(classes = "form-group") {
+                                    button(classes = "form-control btn btn-primary", type = ButtonType.submit) { +"Send Message" }
+                                }
+                            }
+                        }
+                    }
+                    div(classes = "col-lg-4") {
+                        div(classes = "contact-info-card") {
+                            h4(classes = "contact-title") { +"Get in touch" }
+                            div(classes = "row mb-2") {
+                                div(classes = "col-1 pt-1 mr-1") { i(classes = "ti-mobile icon-md") {} }
+                                div(classes = "col-10") {
+                                    h6(classes = "d-inline") { +"Phone :" }
+                                    br()
+                                    span(classes = "text-muted") { +" + (123) 456-789" }
+                                }
+                            }
+                            div(classes = "row mb-2") {
+                                div(classes = "col-1 pt-1 mr-1") { i(classes = "ti-map-alt icon-md") {} }
+                                div(classes = "col-10") {
+                                    h6(classes = "d-inline") { +"Address :" }
+                                    br()
+                                    span(classes = "text-muted") { +" 12345 Fake ST NoWhere AB Country." }
+                                }
+                            }
+                            div(classes = "row mb-2") {
+                                div(classes = "col-1 pt-1 mr-1") { i(classes = "ti-envelope icon-md") {} }
+                                div(classes = "col-10") {
+                                    h6(classes = "d-inline") { +"Email :" }
+                                    br()
+                                    span(classes = "text-muted") { +" info@website.com" }
+                                }
+                            }
+                            ul(classes = "social-icons pt-4") {
+                                li(classes = "social-item") {
+                                    a(classes = "social-link text-dark", href = "#") { i(classes = "ti-facebook") { attributes["aria-hidden"] = "true" } }
+                                }
+                                li(classes = "social-item") {
+                                    a(classes = "social-link text-dark", href = "#") { i(classes = "ti-twitter") { attributes["aria-hidden"] = "true" } }
+                                }
+                                li(classes = "social-item") {
+                                    a(classes = "social-link text-dark", href = "#") { i(classes = "ti-google") { attributes["aria-hidden"] = "true" } }
+                                }
+                                li(classes = "social-item") {
+                                    a(classes = "social-link text-dark", href = "#") { i(classes = "ti-instagram") { attributes["aria-hidden"] = "true" } }
+                                }
+                                li(classes = "social-item") {
+                                    a(classes = "social-link text-dark", href = "#") { i(classes = "ti-github") { attributes["aria-hidden"] = "true" } }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /// Contact Section End
 
         footer("footer py-3") { 
             div("container") {
@@ -554,11 +646,6 @@ fun HTML.indexHtml() {
 
         // Isotope
         script(src = "assets/vendors/isotope/isotope.pkgd.js") {}
-
-        // Google Maps
-        script(src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap") {
-            async = true; defer = true
-        }
 
         // Index
         script(src = "assets/js/index.js") {}

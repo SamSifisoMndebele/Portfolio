@@ -11645,7 +11645,11 @@ pre .code {
     padding: 300px 0 0;
   }
   .contact .contact-form-card {
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px;
+    background-color: rgba(222, 226, 230, 0.15);
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    border-radius: 18px;
   }
   .contact .contact-form-card,
   .contact .contact-info-card {
@@ -11664,8 +11668,11 @@ pre .code {
 .contact .contact-form-card,
 .contact .contact-info-card {
   padding: 35px;
-  background: #fff;
+  background-color: rgba(222, 226, 230, 0.15);
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
   min-height: 500px;
+  border-radius: 18px;
 }
 
 .contact .contact-info-card {
