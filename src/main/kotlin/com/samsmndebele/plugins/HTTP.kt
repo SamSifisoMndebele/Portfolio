@@ -8,13 +8,16 @@ import io.ktor.server.plugins.httpsredirect.*
 fun Application.configureHTTP() {
     install(CORS) {
         allowMethod(HttpMethod.Options)
+        allowMethod(HttpMethod.Head)
         allowMethod(HttpMethod.Get)
         allowMethod(HttpMethod.Post)
         allowMethod(HttpMethod.Put)
         allowMethod(HttpMethod.Delete)
         allowMethod(HttpMethod.Patch)
+
         allowHeader(HttpHeaders.Authorization)
         allowHeader("MyCustomHeader")
+
         anyHost() // @TODO: Don't do this in production if possible. Try to limit it.
     }
     install(HttpsRedirect) {
