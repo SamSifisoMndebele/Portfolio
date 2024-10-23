@@ -11646,7 +11646,7 @@ pre .code {
   }
   .contact .contact-form-card {
     border-bottom: 1px;
-    background-color: rgba(222, 226, 230, 0.15);
+    background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px) !important;
     -webkit-backdrop-filter: blur(6px) !important;
     border-radius: 18px;
@@ -11668,7 +11668,7 @@ pre .code {
 .contact .contact-form-card,
 .contact .contact-info-card {
   padding: 35px;
-  background-color: rgba(222, 226, 230, 0.15);
+  background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(6px) !important;
   min-height: 500px;

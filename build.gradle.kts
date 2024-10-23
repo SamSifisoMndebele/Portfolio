@@ -36,11 +36,10 @@ ktor {
 }
 
 dependencies {
-//    implementation(libs.commons.email)
-
 //    implementation(libs.google.api.client)
+    implementation(libs.commons.email)
     implementation(libs.postgresql)
-    implementation(libs.h2database)
+//    implementation(libs.h2database)
     implementation(libs.logback.classic)
     implementation(libs.jbcrypt)
     implementation(libs.koin.ktor)

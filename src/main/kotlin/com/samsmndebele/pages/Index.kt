@@ -3,21 +3,19 @@ package com.samsmndebele.pages
 import kotlinx.html.*
 import java.time.Year
 
-fun HTML.indexHtml() {
+fun HTML.indexHtml(
+    success: Boolean? = null,
+) {
     lang = "en"
     head {
         meta(charset = "utf-8")
         meta(name = "viewport", content = "width=device-width, initial-scale=1, shrink-to-fit=no")
-        meta(name = "description", content = "Sam Sifiso Mndebele")
         meta(name = "author", content = "Sam Sifiso Mndebele")
-        title("Sam Portfolio")
-
-        link(rel = "icon", type = "image/png", href = "assets/img/favicon.png")
-        link(
-            rel = "stylesheet",
-            type = "text/css",
-            href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        )
+        meta(name = "description", content = "Sam Sifiso Mndebele, a creative professional android developer focused on developing android apps with a clean, simple, and easy-to-use life cycle. Nothing is impossible. If you just work hard enough at it.")
+        meta(name = "keywords", content = "Sam Mndebele, mndebele, android developer, java, kotlin, android, best developer, website, android app, web app, apps")
+        title(content = "Sam Portfolio")
+        link(rel = "icon", type = "image/png", href = "assets/img/favicon.jpg")
+        link(rel = "stylesheet", type = "text/css", href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css")
         link(rel = "stylesheet", type = "text/css", href = "assets/vendors/themify-icons/css/themify-icons.css")
         link(rel = "stylesheet", type = "text/css", href = "assets/css/style.css")
     }
@@ -58,7 +56,7 @@ fun HTML.indexHtml() {
                         }
                     }
                     li ("social-item") {
-                        a ("mailto: sams.mndebele@gmail.com", "_blank", "social-link text-light") {
+                        a ("mailto: sams.mndebele@studentintellect.co.za", "_blank", "social-link text-light") {
                             i ("fa-regular fa-envelope")
                         }
                     }
@@ -108,12 +106,12 @@ fun HTML.indexHtml() {
                         }
                     }
                     ul ("navbar-nav ml-auto") {
-                        li ("nav-item") {
-                            a("#portfolio", classes = "nav-link") { +"Portfolio" }
-                        }
-                        li ("nav-item") {
-                            a("#blog", classes = "nav-link") { +"Blog" }
-                        }
+//                        li ("nav-item") {
+//                            a("#portfolio", classes = "nav-link") { +"Portfolio" }
+//                        }
+//                        li ("nav-item") {
+//                            a("#blog", classes = "nav-link") { +"Blog" }
+//                        }
                         li ("nav-item") {
                             a("#contact", classes = "nav-link") { +"Contact" }
                         }
@@ -140,10 +138,10 @@ fun HTML.indexHtml() {
                         +"Whether it's building a mobile app from scratch or designing a responsive web interface, "
                         +"I bring a blend of creativity and technical prowess to everything I do."
                     }
-                    a ("docs/resume", "_blank", "btn btn-primary btn-rounded") {
-                        i ("ti-printer pr-2")
-                        +"View Resume"
-                    }
+//                    a ("docs/resume", "_blank", "btn btn-primary btn-rounded") {
+//                        i ("ti-printer pr-2")
+//                        +"View Resume"
+//                    }
                 }
 
                 div("col-lg-4 about-card") {
@@ -155,10 +153,10 @@ fun HTML.indexHtml() {
                         li { span { +"Family Name" }; +" : Mndebele" }
                         li { span { +"Birthdate" }; +" : 15 March" }
                         li { span { +"Nationality" }; +" : South African" }
-                        li { span { +"Email" }; +" : sams.mndebele@gmail.com" }
+                        li { span { +"Email" }; +" : sams.mndebele@studentintellect.co.za" }
                         li { span { +"Phone" }; +" : +27 72 164 6430" }
                         li { span { +"Address" }
-                            +" : 104 Clau-Clau No. 2"; br()
+                            +" : 104 Clau-Clau, No. 2"; br()
                             +"Kabokweni, 1245"; br()
                             +"Mbombela, MP"
                         }
@@ -174,7 +172,7 @@ fun HTML.indexHtml() {
                             a("https://wa.me/27721646430?text=Hi Sam", "_blank", "social-link") { i ("fa-brands fa-whatsapp") }
                         }
                         li("social-item") {
-                            a("mailto: sams.mndebele@gmail.com", "_blank", "social-link") { i("fa-regular fa-envelope") }
+                            a("mailto: sams.mndebele@studentintellect.co.za", "_blank", "social-link") { i("fa-regular fa-envelope") }
                         }
                     }
                 }
@@ -528,6 +526,98 @@ fun HTML.indexHtml() {
         }*/
         /// Services Section End
 
+
+        section("section bg-custom-gray") {
+            id = "price"
+            div("container") {
+                h1("mb-5") {
+                    span("text-danger") { +"Developer" }
+                    +" Pricing"
+                }
+                div("row align-items-center") {
+                    div("col-md-6 col-lg-3") {
+                        div("price-card text-center mb-4") {
+                            h3("price-card-title") { +"Portfolio" }
+                            div("price-card-cost") {
+                                sup { +"R"}
+                                span("num") { +"300" }
+                                span("date") { +"once" }
+                            }
+                            ul("list") {
+                                li("list-item") { +"Single Page Website" }
+                                li("list-item") { +"Custom Branding" }
+                                li("list-item") { +"No Custom Domain" }
+                                li("list-item") { +"No Professional Email" }
+                            }
+//                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
+                        }
+                    }
+
+                    div("col-md-6 col-lg-3") {
+                        div("price-card text-center mb-4") {
+                            h3("price-card-title") { +"Portfolio" }
+                            div("price-card-cost") {
+                                sup { +"R"}
+                                span("num") { +"600" }
+                                span("date") { +"pa" }
+                            }
+                            ul("list") {
+                                li("list-item") { +"Many Pages Website" }
+                                li("list-item") { +"Custom Branding" }
+                                li("list-item") { +"Custom Domain" }
+                                li("list-item") { +"1 Professional Email" }
+                            }
+//                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
+                        }
+                    }
+
+                    div("col-md-6 col-lg-3") {
+                        div("price-card text-center price-card-required mb-4") {
+                            h3("price-card-title") { +"E-Commerce" }
+                            div("price-card-cost") {
+                                sup { +"R"}
+                                span("num") { +"150" }
+                                span("date") { +"pm" }
+                            }
+                            ul("list") {
+                                li("list-item") { +"100+ Products" }
+                                li("list-item") { +"Custom Branding" }
+                                li("list-item") { +"Custom Domain" }
+                                li("list-item") { +"5 Professional Email" }
+                            }
+//                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
+                        }
+                    }
+
+                    div("col-md-6 col-lg-3") {
+                        div("price-card text-center mb-4") {
+                            h3("price-card-title") { +"Mobile App" }
+                            div("price-card-cost") {
+                                sup { +"R"}
+                                span("num") { +"1500" }
+                                span("date") { +"+" }
+                            }
+                            ul("list") {
+                                li("list-item") { +"Any Idea" }
+                                li("list-item") { +"10GB Storage" }
+                                li("list-item") { +"Landing Web page" }
+                                li("list-item") { +"Monetization" }
+                            }
+//                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        section("section bg-dark py-5") {
+            div("container text-center") {
+                h2("text-light mb-5 font-weight-normal") { +"I Am Available For FreeLance" }
+                a("#contact", classes = "btn bg-primary w-lg") { +"Hire Me" }
+            }
+        }
+
         /// Contact Section
         div(classes = "section contact") {
             id = "contact"
@@ -544,24 +634,34 @@ fun HTML.indexHtml() {
                 div(classes = "row") {
                     div(classes = "col-lg-8") {
                         div(classes = "contact-form-card") {
-                            h4(classes = "contact-title") { +"Send a message" }
-                            form(action = "") {
+                            h4(classes = "contact-title") { +"Get in Touch" }
+                            form(action = "/", encType = FormEncType.applicationXWwwFormUrlEncoded, method = FormMethod.post) {
                                 div(classes = "form-group") {
                                     input(classes = "form-control", type = InputType.text) {
                                         required = true
-                                        placeholder = "Name *"
+                                        placeholder = "Name(s) *"
+                                        name = "name"
                                     }
                                 }
                                 div(classes = "form-group") {
                                     input(classes = "form-control", type = InputType.email) {
                                         required = true
                                         placeholder = "Email *"
+                                        name = "email"
+                                    }
+                                }
+                                div(classes = "form-group") {
+                                    input(classes = "form-control", type = InputType.tel) {
+                                        required = false
+                                        placeholder = "Phone"
+                                        name = "phone"
                                     }
                                 }
                                 div(classes = "form-group") {
                                     textArea(classes = "form-control", rows = "7") {
                                         required = true
                                         placeholder = "Message *"
+                                        name = "message"
                                     }
                                 }
                                 div(classes = "form-group") {
@@ -573,12 +673,13 @@ fun HTML.indexHtml() {
                     div(classes = "col-lg-4") {
                         div(classes = "contact-info-card") {
                             h4(classes = "contact-title") { +"Get in touch" }
+
                             div(classes = "row mb-2") {
                                 div(classes = "col-1 pt-1 mr-1") { i(classes = "ti-mobile icon-md") {} }
                                 div(classes = "col-10") {
                                     h6(classes = "d-inline") { +"Phone :" }
                                     br()
-                                    span(classes = "text-muted") { +" + (123) 456-789" }
+                                    span(classes = "text-muted") { +" +27 72 164 6430" }
                                 }
                             }
                             div(classes = "row mb-2") {
@@ -586,32 +687,40 @@ fun HTML.indexHtml() {
                                 div(classes = "col-10") {
                                     h6(classes = "d-inline") { +"Address :" }
                                     br()
-                                    span(classes = "text-muted") { +" 12345 Fake ST NoWhere AB Country." }
+                                    span(classes = "text-muted") {
+                                        +"104 Clau-Clau, No. 2"; br()
+                                        +"Kabokweni, 1245, MP"
+                                    }
                                 }
                             }
                             div(classes = "row mb-2") {
-                                div(classes = "col-1 pt-1 mr-1") { i(classes = "ti-envelope icon-md") {} }
+                                div(classes = "col-1 pt-1 mr-1") { i(classes = "fa-regular fa-envelope icon-md") {} }
                                 div(classes = "col-10") {
                                     h6(classes = "d-inline") { +"Email :" }
                                     br()
-                                    span(classes = "text-muted") { +" info@website.com" }
+                                    span(classes = "text-muted") { +" sams.mndebele@studentintellect.co.za" }
                                 }
                             }
                             ul(classes = "social-icons pt-4") {
-                                li(classes = "social-item") {
-                                    a(classes = "social-link text-dark", href = "#") { i(classes = "ti-facebook") { attributes["aria-hidden"] = "true" } }
+                                li("social-item") {
+                                    a("https://github.com/SamSifisoMndebele", "_blank", "social-link text-dark") {
+                                        i ("fa-brands fa-github") { attributes["aria-hidden"] = "true" }
+                                    }
                                 }
-                                li(classes = "social-item") {
-                                    a(classes = "social-link text-dark", href = "#") { i(classes = "ti-twitter") { attributes["aria-hidden"] = "true" } }
+                                li("social-item") {
+                                    a("https://www.facebook.com/sam.sifiso.mndebele", "_blank", "social-link text-dark") {
+                                        i ("fa-brands fa-facebook-f") { attributes["aria-hidden"] = "true" }
+                                    }
                                 }
-                                li(classes = "social-item") {
-                                    a(classes = "social-link text-dark", href = "#") { i(classes = "ti-google") { attributes["aria-hidden"] = "true" } }
+                                li("social-item") {
+                                    a("https://wa.me/27721646430?text=Hi Sam", "_blank", "social-link text-dark") {
+                                        i ("fa-brands fa-whatsapp") { attributes["aria-hidden"] = "true" }
+                                    }
                                 }
-                                li(classes = "social-item") {
-                                    a(classes = "social-link text-dark", href = "#") { i(classes = "ti-instagram") { attributes["aria-hidden"] = "true" } }
-                                }
-                                li(classes = "social-item") {
-                                    a(classes = "social-link text-dark", href = "#") { i(classes = "ti-github") { attributes["aria-hidden"] = "true" } }
+                                li("social-item") {
+                                    a("mailto: sams.mndebele@studentintellect.co.za", "_blank", "social-link text-dark") {
+                                        i("fa-regular fa-envelope") { attributes["aria-hidden"] = "true" }
+                                    }
                                 }
                             }
                         }
@@ -621,8 +730,11 @@ fun HTML.indexHtml() {
         }
         /// Contact Section End
 
-        footer("footer py-3") { 
+        footer("footer py-3") {
             div("container") {
+//                onClickFunction = { event ->
+//                    window.alert("I was clicked - ${event.timeStamp}")
+//                }
                 p("small mb-0 text-light") {
                     +"© "
                     +Year.now().toString()
@@ -648,6 +760,11 @@ fun HTML.indexHtml() {
         script(src = "assets/vendors/isotope/isotope.pkgd.js") {}
 
         // Index
-        script(src = "assets/js/index.js") {}
+
+        if (success != null && success) {
+            script(src = "assets/js/success.js") { defer = true; async = false }
+        } else if (success != null) {
+            script(src = "assets/js/error.js") { defer = true; async = false }
+        }
     }
 }
