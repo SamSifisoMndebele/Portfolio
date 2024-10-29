@@ -14,7 +14,7 @@ fun HTML.indexHtml(
         meta(name = "description", content = "Sam Sifiso Mndebele, a creative professional android developer focused on developing android apps with a clean, simple, and easy-to-use life cycle. Nothing is impossible. If you just work hard enough at it.")
         meta(name = "keywords", content = "Sam Mndebele, mndebele, android developer, java, kotlin, android, best developer, website, android app, web app, apps")
         title(content = "Sam Portfolio")
-        link(rel = "icon", type = "image/png", href = "assets/img/favicon.jpg")
+        link(rel = "icon", type = "image/png", href = "assets/img/favicon.png")
         link(rel = "stylesheet", type = "text/css", href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css")
         link(rel = "stylesheet", type = "text/css", href = "assets/vendors/themify-icons/css/themify-icons.css")
         link(rel = "stylesheet", type = "text/css", href = "assets/css/style.css")
@@ -619,7 +619,7 @@ fun HTML.indexHtml(
         }
 
         /// Contact Section
-        div(classes = "section contact") {
+        div("section contact") {
             id = "contact"
             iframe(classes = "map") {
                 id = "map"
@@ -630,78 +630,78 @@ fun HTML.indexHtml(
                 attributes["allowfullscreen"] = ""
                 src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.33269586726652!2d31.154130775885324!3d-25.360484570110884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee839ca74913f63%3A0x5bed9ed642e818e8!2sAVIDCo!5e0!3m2!1sen!2sza!4v1729181807545!5m2!1sen!2sza"
             }
-            div(classes = "container") {
-                div(classes = "row") {
-                    div(classes = "col-lg-8") {
-                        div(classes = "contact-form-card") {
-                            h4(classes = "contact-title") { +"Get in Touch" }
+            div("container") {
+                div("row") {
+                    div("col-lg-8") {
+                        div("contact-form-card") {
+                            h4("contact-title") { +"Get in Touch" }
                             form(action = "/", encType = FormEncType.applicationXWwwFormUrlEncoded, method = FormMethod.post) {
-                                div(classes = "form-group") {
+                                div("form-group") {
                                     input(classes = "form-control", type = InputType.text) {
                                         required = true
                                         placeholder = "Name(s) *"
                                         name = "name"
                                     }
                                 }
-                                div(classes = "form-group") {
+                                div("form-group") {
                                     input(classes = "form-control", type = InputType.email) {
                                         required = true
                                         placeholder = "Email *"
                                         name = "email"
                                     }
                                 }
-                                div(classes = "form-group") {
+                                div("form-group") {
                                     input(classes = "form-control", type = InputType.tel) {
                                         required = false
                                         placeholder = "Phone"
                                         name = "phone"
                                     }
                                 }
-                                div(classes = "form-group") {
+                                div("form-group") {
                                     textArea(classes = "form-control", rows = "7") {
                                         required = true
                                         placeholder = "Message *"
                                         name = "message"
                                     }
                                 }
-                                div(classes = "form-group") {
+                                div("form-group") {
                                     button(classes = "form-control btn btn-primary", type = ButtonType.submit) { +"Send Message" }
                                 }
                             }
                         }
                     }
-                    div(classes = "col-lg-4") {
-                        div(classes = "contact-info-card") {
-                            h4(classes = "contact-title") { +"Get in touch" }
+                    div("col-lg-4") {
+                        div("contact-info-card") {
+                            h4("contact-title") { +"Get in touch" }
 
-                            div(classes = "row mb-2") {
-                                div(classes = "col-1 pt-1 mr-1") { i(classes = "ti-mobile icon-md") {} }
-                                div(classes = "col-10") {
-                                    h6(classes = "d-inline") { +"Phone :" }
+                            div("row mb-2") {
+                                div("col-1 pt-1 mr-1") { i("ti-mobile icon-md") {} }
+                                div("col-10") {
+                                    h6("d-inline") { +"Phone :" }
                                     br()
-                                    span(classes = "text-muted") { +" +27 72 164 6430" }
+                                    span("text-muted") { +" +27 72 164 6430" }
                                 }
                             }
-                            div(classes = "row mb-2") {
-                                div(classes = "col-1 pt-1 mr-1") { i(classes = "ti-map-alt icon-md") {} }
-                                div(classes = "col-10") {
-                                    h6(classes = "d-inline") { +"Address :" }
+                            div("row mb-2") {
+                                div("col-1 pt-1 mr-1") { i("ti-map-alt icon-md") {} }
+                                div("col-10") {
+                                    h6("d-inline") { +"Address :" }
                                     br()
-                                    span(classes = "text-muted") {
+                                    span("text-muted") {
                                         +"104 Clau-Clau, No. 2"; br()
                                         +"Kabokweni, 1245, MP"
                                     }
                                 }
                             }
-                            div(classes = "row mb-2") {
-                                div(classes = "col-1 pt-1 mr-1") { i(classes = "fa-regular fa-envelope icon-md") {} }
-                                div(classes = "col-10") {
-                                    h6(classes = "d-inline") { +"Email :" }
+                            div("row mb-2") {
+                                div("col-1 pt-1 mr-1") { i("fa-regular fa-envelope icon-md") {} }
+                                div("col-10") {
+                                    h6("d-inline") { +"Email :" }
                                     br()
-                                    span(classes = "text-muted") { +" sams.mndebele@studentintellect.co.za" }
+                                    span("text-muted") { +" sams.mndebele@studentintellect.co.za" }
                                 }
                             }
-                            ul(classes = "social-icons pt-4") {
+                            ul("social-icons pt-4") {
                                 li("social-item") {
                                     a("https://github.com/SamSifisoMndebele", "_blank", "social-link text-dark") {
                                         i ("fa-brands fa-github") { attributes["aria-hidden"] = "true" }

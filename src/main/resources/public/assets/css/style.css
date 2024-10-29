@@ -11506,7 +11506,7 @@ pre .code {
   position: relative;
   height: 80vh;
   min-height: 600px;
-  /*background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/header.jpg);*/
+  background-image: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/header.jpg);
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/header.jpg);
   background-size: cover;
   background-position: center;
@@ -11553,7 +11553,7 @@ pre .code {
   margin-bottom: 40px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .header {
     height: 500px;
     min-height: 500px;
@@ -11642,18 +11642,19 @@ pre .code {
 
 @media (max-width: 991.98px) {
   .contact {
-    padding: 300px 0 0;
+    padding: 72px 0 120px 0;
   }
   .contact .contact-form-card {
     border-bottom: 1px;
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
     border-radius: 18px;
   }
   .contact .contact-form-card,
   .contact .contact-info-card {
     min-height: auto !important;
+    margin-bottom: 16px;
   }
 }
 
