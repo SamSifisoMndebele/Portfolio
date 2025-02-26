@@ -15,21 +15,6 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
 fun Application.configureRouting() {
-    install(Resources)
-    install(AutoHeadResponse)
-    install(StatusPages) {
-        exception<Throwable> { call, cause ->
-            call.respondText(text = "500: $cause", status = HttpStatusCode.InternalServerError)
-        }
-    }
-//    install(Thymeleaf) {
-//        setTemplateResolver(ClassLoaderTemplateResolver().apply {
-//            prefix = "public/"
-//            suffix = ".html"
-//            characterEncoding = "utf-8"
-//        })
-//    }
-
     routing {
         staticResources("/assets", "public/assets")
         staticResources("/public", "public")
