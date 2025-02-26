@@ -16,8 +16,11 @@ fun HTML.indexHtml(
         title(content = "Sam Portfolio")
         link(rel = "icon", type = "image/png", href = "assets/img/favicon.png")
         link(rel = "stylesheet", type = "text/css", href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css")
+//        link(rel = "stylesheet", type = "text/css", href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&amp;display=swap")
         link(rel = "stylesheet", type = "text/css", href = "assets/vendors/themify-icons/css/themify-icons.css")
+        link(rel = "stylesheet", type = "text/css", href = "assets/css/header.css")
         link(rel = "stylesheet", type = "text/css", href = "assets/css/style.css")
+        link(rel = "stylesheet", type = "text/css", href = "assets/css/loader.css")
     }
     body {
         attributes["data-spy"] = "scroll"
@@ -36,6 +39,7 @@ fun HTML.indexHtml(
         }
         header ("header") {
             div ("container") {
+                id = "header"
                 style = "max-width: 100vw !important;"
                 ul ("social-icons pt-3") {
                     style = "padding-left: 32px;"
@@ -63,9 +67,29 @@ fun HTML.indexHtml(
                 }
                 div ("header-content") {
                     style = "padding-left: 8vw; padding-right: 8vh"
-                    h4 ("header-subtitle") { +"Hello, I am" }
-                    h1 ("header-title") { +"Sam Sifiso" }
-                    h1 ("header-title") { +"Mndebele" }
+                    h4 ("header-subtitle") { +"I am" }
+                    h1 ("header-title") {
+                        span { +"S" }
+                        span { +"A" }
+                        span { +"M" }
+                        +" "
+                        span { +"S" }
+                        span { +"I" }
+                        span { +"F" }
+                        span { +"I" }
+                        span { +"S" }
+                        span { +"O" }
+                    }
+                    h1 ("header-title") {
+                        span { +"M" }
+                        span { +"N" }
+                        span { +"D" }
+                        span { +"E" }
+                        span { +"B" }
+                        span { +"E" }
+                        span { +"L" }
+                        span { +"E" }
+                    }
                     h6 ("header-mono") { +"Full Stack Developer" }
                 }
             }
@@ -435,7 +459,7 @@ fun HTML.indexHtml(
         }
 
         /// Services Section
-        /*section ("section") {
+        section ("section bg-custom-gray") {
             id = "service"
             div ("container") {
                 h2 ("mb-5 pb-4") {
@@ -446,170 +470,170 @@ fun HTML.indexHtml(
                     div ("col-md-4 col-sm-6") {
                         div ("card mb-5") {
                             div ("card-header has-icon") {
-                                i ("ti-vector text-danger") {
+                                i ("ti-mobile text-danger") {
                                     attributes["aria-hidden"] = "true"
                                 }
                             }
                             div ("card-body px-4 py-3") {
-                                h5 ("mb-3 card-title text-dark") { +"Ullam" }
-                                p ("subtitle") { +"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia." }
+                                h5 ("mb-3 card-title text-dark") { +"Android Development" }
+                                p ("subtitle") { +"With expertise in Java and Kotlin, I develop native Android applications that are user-friendly and feature-rich. My Android development skills ensure that apps are optimized for performance, security, and compatibility across a wide range of devices." }
                             }
                         }
                     }
                     div ("col-md-4 col-sm-6") {
                         div ("card mb-5") {
                             div ("card-header has-icon") {
-                                i ("ti-write text-danger") {
+                                i ("ti-world text-danger") {
                                     attributes["aria-hidden"] = "true"
                                 }
                             }
                             div ("card-body px-4 py-3") {
-                                h5 ("mb-3 card-title text-dark") { +"Asperiores" }
-                                p ("subtitle") { +"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia." }
+                                h5 ("mb-3 card-title text-dark") { +"Web Application Development" }
+                                p ("subtitle") { +"I specialize in creating custom web applications that perfectly align with client needs. Utilizing the latest technologies and frameworks, I develop robust, scalable, and high-performing web solutions that offer seamless user experiences." }
                             }
                         }
                     }
                     div ("col-md-4 col-sm-6") {
                         div ("card mb-5") {
                             div ("card-header has-icon") {
-                                i ("ti-package text-danger") {
+                                i ("ti-harddrives text-danger") {
                                     attributes["aria-hidden"] = "true"
                                 }
                             }
                             div ("card-body px-4 py-3") {
-                                h5 ("mb-3 card-title text-dark") { +"Tempora" }
-                                p ("subtitle") { +"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia." }
+                                h5 ("mb-3 card-title text-dark") { +"Back-End Development" }
+                                p ("subtitle") { +"I am proficient in designing and developing server-side applications using frameworks like Node.js, Express, and Django. My back-end solutions are reliable, secure, and capable of handling high volumes of traffic, ensuring optimal performance and stability." }
                             }
                         }
                     }
                     div ("col-md-4 col-sm-6") {
                         div ("card mb-5") {
                             div ("card-header has-icon") {
-                                i ("ti-map-alt text-danger") {
+                                i ("ti-server text-danger") {
                                     attributes["aria-hidden"] = "true"
                                 }
                             }
                             div ("card-body px-4 py-3") {
-                                h5 ("mb-3 card-title text-dark") { +"Provident" }
-                                p ("subtitle") { +"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia." }
+                                h5 ("mb-3 card-title text-dark") { +"Database Management" }
+                                p ("subtitle") { +"I provide comprehensive database management services, including design, development, and maintenance. Using SQL and NoSQL technologies like MySQL, PostgreSQL, and MongoDB, I ensure that databases are efficiently organized and easily accessible." }
                             }
                         }
                     }
                     div ("col-md-4 col-sm-6") {
                         div ("card mb-5") {
                             div ("card-header has-icon") {
-                                i ("ti-bar-chart text-danger") {
+                                i ("ti-cloud text-danger") {
                                     attributes["aria-hidden"] = "true"
                                 }
                             }
                             div ("card-body px-4 py-3") {
-                                h5 ("mb-3 card-title text-dark") { +"Consectetur" }
-                                p ("subtitle") { +"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia." }
+                                h5 ("mb-3 card-title text-dark") { +"API Development and Integration" }
+                                p ("subtitle") { +"I offer API development and integration services to enhance the functionality of web applications. By creating and integrating RESTful APIs with Ktor, I enable seamless communication between different services and platforms." }
                             }
                         }
                     }
                     div ("col-md-4 col-sm-6") {
                         div ("card mb-5") {
                             div ("card-header has-icon") {
-                                i ("ti-support text-danger") {
+                                i ("ti-bag text-danger") {
                                     attributes["aria-hidden"] = "true"
                                 }
                             }
                             div ("card-body px-4 py-3") {
-                                h5 ("mb-3 card-title text-dark") { +"Veritatis" }
-                                p ("subtitle") { +"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident, dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi, unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla aperiam officia." }
+                                h5 ("mb-3 card-title text-dark") { +"E-commerce Solutions" }
+                                p ("subtitle") { +"I create and optimize e-commerce websites with functionalities such as online stores, payment gateways, and inventory management. My e-commerce solutions are tailored to meet the unique needs of each business, ensuring a smooth and secure online shopping experience." }
                             }
                         }
                     }
                 }
             }
-        }*/
+        }
         /// Services Section End
 
 
-        section("section bg-custom-gray") {
-            id = "price"
-            div("container") {
-                h1("mb-5") {
-                    span("text-danger") { +"Developer" }
-                    +" Pricing"
-                }
-                div("row align-items-center") {
-                    div("col-md-6 col-lg-3") {
-                        div("price-card text-center mb-4") {
-                            h3("price-card-title") { +"Portfolio" }
-                            div("price-card-cost") {
-                                sup { +"R"}
-                                span("num") { +"300" }
-                                span("date") { +"once" }
-                            }
-                            ul("list") {
-                                li("list-item") { +"Single Page Website" }
-                                li("list-item") { +"Custom Branding" }
-                                li("list-item") { +"No Custom Domain" }
-                                li("list-item") { +"No Professional Email" }
-                            }
-//                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
-                        }
-                    }
-
-                    div("col-md-6 col-lg-3") {
-                        div("price-card text-center mb-4") {
-                            h3("price-card-title") { +"Portfolio" }
-                            div("price-card-cost") {
-                                sup { +"R"}
-                                span("num") { +"600" }
-                                span("date") { +"pa" }
-                            }
-                            ul("list") {
-                                li("list-item") { +"Many Pages Website" }
-                                li("list-item") { +"Custom Branding" }
-                                li("list-item") { +"Custom Domain" }
-                                li("list-item") { +"1 Professional Email" }
-                            }
-//                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
-                        }
-                    }
-
-                    div("col-md-6 col-lg-3") {
-                        div("price-card text-center price-card-required mb-4") {
-                            h3("price-card-title") { +"E-Commerce" }
-                            div("price-card-cost") {
-                                sup { +"R"}
-                                span("num") { +"150" }
-                                span("date") { +"pm" }
-                            }
-                            ul("list") {
-                                li("list-item") { +"100+ Products" }
-                                li("list-item") { +"Custom Branding" }
-                                li("list-item") { +"Custom Domain" }
-                                li("list-item") { +"5 Professional Email" }
-                            }
-//                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
-                        }
-                    }
-
-                    div("col-md-6 col-lg-3") {
-                        div("price-card text-center mb-4") {
-                            h3("price-card-title") { +"Mobile App" }
-                            div("price-card-cost") {
-                                sup { +"R"}
-                                span("num") { +"1500" }
-                                span("date") { +"+" }
-                            }
-                            ul("list") {
-                                li("list-item") { +"Any Idea" }
-                                li("list-item") { +"10GB Storage" }
-                                li("list-item") { +"Landing Web page" }
-                                li("list-item") { +"Monetization" }
-                            }
-//                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
-                        }
-                    }
-                }
-            }
-
-        }
+//        section("section bg-custom-gray") {
+//            id = "price"
+//            div("container") {
+//                h1("mb-5") {
+//                    span("text-danger") { +"Developer" }
+//                    +" Pricing"
+//                }
+//                div("row align-items-center") {
+//                    div("col-md-6 col-lg-3") {
+//                        div("price-card text-center mb-4") {
+//                            h3("price-card-title") { +"Portfolio" }
+//                            div("price-card-cost") {
+//                                sup { +"R"}
+//                                span("num") { +"300" }
+//                                span("date") { +"once" }
+//                            }
+//                            ul("list") {
+//                                li("list-item") { +"Single Page Website" }
+//                                li("list-item") { +"Custom Branding" }
+//                                li("list-item") { +"No Custom Domain" }
+//                                li("list-item") { +"No Professional Email" }
+//                            }
+////                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
+//                        }
+//                    }
+//
+//                    div("col-md-6 col-lg-3") {
+//                        div("price-card text-center mb-4") {
+//                            h3("price-card-title") { +"Portfolio" }
+//                            div("price-card-cost") {
+//                                sup { +"R"}
+//                                span("num") { +"600" }
+//                                span("date") { +"pa" }
+//                            }
+//                            ul("list") {
+//                                li("list-item") { +"Many Pages Website" }
+//                                li("list-item") { +"Custom Branding" }
+//                                li("list-item") { +"Custom Domain" }
+//                                li("list-item") { +"1 Professional Email" }
+//                            }
+////                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
+//                        }
+//                    }
+//
+//                    div("col-md-6 col-lg-3") {
+//                        div("price-card text-center price-card-required mb-4") {
+//                            h3("price-card-title") { +"E-Commerce" }
+//                            div("price-card-cost") {
+//                                sup { +"R"}
+//                                span("num") { +"150" }
+//                                span("date") { +"pm" }
+//                            }
+//                            ul("list") {
+//                                li("list-item") { +"100+ Products" }
+//                                li("list-item") { +"Custom Branding" }
+//                                li("list-item") { +"Custom Domain" }
+//                                li("list-item") { +"5 Professional Email" }
+//                            }
+////                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
+//                        }
+//                    }
+//
+//                    div("col-md-6 col-lg-3") {
+//                        div("price-card text-center mb-4") {
+//                            h3("price-card-title") { +"Mobile App" }
+//                            div("price-card-cost") {
+//                                sup { +"R"}
+//                                span("num") { +"1500" }
+//                                span("date") { +"+" }
+//                            }
+//                            ul("list") {
+//                                li("list-item") { +"Any Idea" }
+//                                li("list-item") { +"10GB Storage" }
+//                                li("list-item") { +"Landing Web page" }
+//                                li("list-item") { +"Monetization" }
+//                            }
+////                            button(classes = "btn btn-primary btn-rounded w-lg") { +"Subscribe" }
+//                        }
+//                    }
+//                }
+//            }
+//
+//        }
 
         section("section bg-dark py-5") {
             div("container text-center") {
@@ -637,35 +661,41 @@ fun HTML.indexHtml(
                             h4("contact-title") { +"Get in Touch" }
                             form(action = "/", encType = FormEncType.applicationXWwwFormUrlEncoded, method = FormMethod.post) {
                                 div("form-group") {
-                                    input(classes = "form-control", type = InputType.text) {
+                                    textInput(classes = "form-control", name = "name") {
+                                        id = "name"
                                         required = true
                                         placeholder = "Name(s) *"
-                                        name = "name"
+                                        pattern = "[a-zA-Z '.]{2,}"
                                     }
                                 }
                                 div("form-group") {
-                                    input(classes = "form-control", type = InputType.email) {
+                                    emailInput(classes = "form-control", name = "email") {
+                                        id = "email"
                                         required = true
                                         placeholder = "Email *"
-                                        name = "email"
                                     }
                                 }
                                 div("form-group") {
-                                    input(classes = "form-control", type = InputType.tel) {
+                                    telInput(classes = "form-control", name = "phone") {
+                                        id = "phone"
                                         required = false
                                         placeholder = "Phone"
-                                        name = "phone"
                                     }
                                 }
                                 div("form-group") {
                                     textArea(classes = "form-control", rows = "7") {
+                                        id = "message"
+                                        name = "message"
                                         required = true
                                         placeholder = "Message *"
-                                        name = "message"
                                     }
                                 }
-                                div("form-group") {
-                                    button(classes = "form-control btn btn-primary", type = ButtonType.submit) { +"Send Message" }
+                                div("form-group text-center") {
+                                    button(classes = "form-control text-center btn btn-primary", type = ButtonType.submit) {
+                                        id = "button"
+                                        style = "height: 50px !important"
+                                        +"Send Message"
+                                    }
                                 }
                             }
                         }
@@ -760,6 +790,13 @@ fun HTML.indexHtml(
         script(src = "assets/vendors/isotope/isotope.pkgd.js") {}
 
         // Index
+        script(src = "assets/js/index.js") {}
+
+        // Header
+        script(src = "assets/js/header.js", type = "module") {}
+
+        // Form
+//        script(src = "assets/js/form.js", type = "module") {}
 
         if (success != null && success) {
             script(src = "assets/js/success.js") { defer = true; async = false }

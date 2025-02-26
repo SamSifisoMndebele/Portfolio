@@ -39,8 +39,8 @@ fun Application.configureRouting() {
         }
 
         post("/") {
-            val parameters = call.receiveParameters()
             try {
+                val parameters = call.receiveParameters()
                 val name = parameters["name"]!!
                 val email = parameters["email"]!!
                 val phone = parameters["phone"]
