@@ -38,6 +38,10 @@ ktor {
 dependencies {
 //    implementation(libs.google.api.client)
     implementation(libs.commons.email)
+    implementation(libs.firebase.admin) {
+        exclude("com.google.guava")
+    }
+    implementation(libs.firebase.admin.guavaWorkaround)
     implementation(libs.postgresql)
 //    implementation(libs.h2database)
     implementation(libs.logback.classic)
