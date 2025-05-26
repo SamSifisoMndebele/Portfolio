@@ -12,12 +12,13 @@ import java.sql.Statement
 
 @Serializable
 data class Contact(
-    val id: Int = 0,
+//    val id: Int = 0,
     val name: String,
     val email: String,
     val phone: String?,
     val message: String
 )
+/*
 object ContactService {
     private const val CREATE_TABLE_CONTACTS = """
             CREATE TABLE contacts(
@@ -79,4 +80,5 @@ object ContactService {
         }
     }
 }
+*/
 
