@@ -10,10 +10,22 @@ fun HTML.indexHtml(
     head {
         meta(charset = "utf-8")
         meta(name = "viewport", content = "width=device-width, initial-scale=1, shrink-to-fit=no")
+        title(content = "Sam Sifiso Mndebele - Portfolio")
         meta(name = "author", content = "Sam Sifiso Mndebele")
         meta(name = "description", content = "Sam Sifiso Mndebele, a creative professional android developer focused on developing android apps with a clean, simple, and easy-to-use life cycle. Nothing is impossible. If you just work hard enough at it.")
         meta(name = "keywords", content = "Sam Mndebele, mndebele, android developer, java, kotlin, android, best developer, website, android app, web app, apps")
-        title(content = "Sam Portfolio")
+        meta {
+            attributes["property"] = "og:image"
+            content = "https://samsifisomndebele.studentintellect.co.za/assets/img/avatar.jpg"
+        }
+        meta {
+            attributes["property"] = "og:url"
+            content = "https://samsifisomndebele.studentintellect.co.za/"
+        }
+        meta {
+            attributes["property"] = "og:type"
+            content = "website"
+        }
         link(rel = "icon", type = "image/png", href = "assets/img/favicon.png")
         link(rel = "stylesheet", type = "text/css", href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css")
 //        link(rel = "stylesheet", type = "text/css", href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&amp;display=swap")

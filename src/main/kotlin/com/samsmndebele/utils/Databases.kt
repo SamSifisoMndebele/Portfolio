@@ -20,8 +20,11 @@ val dbConnection: Connection
             val user = System.getenv("DB_USER")
             val password = System.getenv("DB_PASS")
 
-            connection =
-                DriverManager.getConnection("jdbc:postgresql://$host:$port/$dbName?ssl=require", user, password)
+            connection = DriverManager.getConnection(
+                "jdbc:postgresql://$host:$port/$dbName?ssl=require",
+                user,
+                password
+            )
         }
         return connection!!
     }
